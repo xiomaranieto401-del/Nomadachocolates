@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nómada | Chocolates extraordinarios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Navegación principal">
+      <a class="brand-link" href="#home" aria-label="Ir al inicio">
+        <img class="brand-mark" src="assets/nomada-logo.png" alt="Nómada Chocolatería" />
+      </a>
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="#home">Home</a>
+        <a href="#combo">Combo</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <img
+            class="nomada-logo"
+            src="assets/nomada-logo.png"
+            alt="Nómada Chocolatería"
+            width="2430"
+            height="620"
+          />
+
+          <p class="hero-tagline">chocolates extraordinarios</p>
+        </div>
+      </section>
+
+      <section id="combo" class="content-section section-combo" aria-labelledby="combo-title">
+        <div class="section-inner combo-inner">
+          <div class="combo-intro">
+            <div>
+              <p class="section-kicker">Caja de bombones</p>
+              <h2 id="combo-title">Seis destinos, <em>una caja.</em></h2>
+              <p class="combo-description">
+                Seis bombones, seis formas de descubrir Latinoamérica. Cada pieza
+                combina un porcentaje de cacao con un relleno característico,
+                mientras los animales de la caja señalan el origen de cada viaje.
+              </p>
+            </div>
+            <figure class="box-visual">
+              <img src="assets/nomada-box.png" alt="Caja de bombones Nómada ilustrada con paisajes y animales latinoamericanos" />
+            </figure>
+          </div>
+
+          <p class="carousel-kicker">Explorá los sabores de la caja</p>
+
+          <div class="combo-carousel" data-carousel aria-label="Carrusel de bombones">
+            <button class="carousel-control carousel-control-prev" type="button" data-carousel-prev aria-label="Bombón anterior">
+              <span aria-hidden="true">←</span>
+            </button>
+
+            <div class="combo-track" data-carousel-track>
+              <button class="combo-slide" type="button" data-country="Venezuela" data-percentage="100%" data-flavor="Mascarpone y vainilla" aria-label="Ver bombón de Venezuela">
+                <img src="assets/bombones/venezuela.png" alt="Bombón de Venezuela, entero y cortado" />
+              </button>
+              <button class="combo-slide" type="button" data-country="Ecuador" data-percentage="90%" data-flavor="Miel alpina y crema de leche" aria-label="Ver bombón de Ecuador">
+                <img src="assets/bombones/ecuador.png" alt="Bombón de Ecuador, entero y cortado" />
+              </button>
+              <button class="combo-slide" type="button" data-country="Perú" data-percentage="85%" data-flavor="Frambuesa y gianduja suave" aria-label="Ver bombón de Perú">
+                <img src="assets/bombones/peru.png" alt="Bombón de Perú, entero y cortado" />
+              </button>
+              <button class="combo-slide" type="button" data-country="Colombia" data-percentage="70%" data-flavor="Tiramisù" aria-label="Ver bombón de Colombia">
+                <img src="assets/bombones/colombia.png" alt="Bombón de Colombia, entero y cortado" />
+              </button>
+              <button class="combo-slide" type="button" data-country="Brasil" data-percentage="60%" data-flavor="Praliné de nuez y caramelo" aria-label="Ver bombón de Brasil">
+                <img src="assets/bombones/brasil.png" alt="Bombón de Brasil, entero y cortado" />
+              </button>
+              <button class="combo-slide" type="button" data-country="Argentina" data-percentage="50% leche" data-flavor="Dulce de leche" aria-label="Ver bombón de Argentina">
+                <img src="assets/bombones/argentina.png" alt="Bombón de Argentina, entero y cortado" />
+              </button>
+            </div>
+
+            <button class="carousel-control carousel-control-next" type="button" data-carousel-next aria-label="Bombón siguiente">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <div class="combo-detail" aria-live="polite">
+            <span class="combo-detail-country" data-carousel-country>Venezuela</span>
+            <h3 data-carousel-percentage>100%</h3>
+            <p data-carousel-flavor>Mascarpone y vainilla</p>
+          </div>
+
+          <div class="carousel-dots" data-carousel-dots aria-label="Elegir bombón"></div>
+        </div>
+      </section>
+
+      <section id="nosotros" class="content-section section-about" aria-labelledby="nosotros-title">
+        <div class="section-inner about-inner">
+          <div class="about-intro">
+            <h2 id="nosotros-title">Un viaje en <em>cada bombón.</em></h2>
+            <p>
+              Durante 25 años, Nómada exploró orígenes del cacao y tradiciones
+              europeas para convertir cada pieza en un recorrido de sabores.
+            </p>
+          </div>
+
+          <div class="about-points" aria-label="Puntos principales sobre Nómada">
+            <article class="about-point">
+              <span>- 01</span>
+              <h3>Cacao latinoamericano</h3>
+              <p>Una búsqueda por distintos territorios y formas de origen.</p>
+            </article>
+            <article class="about-point">
+              <span>- 02</span>
+              <h3>Herencia europea</h3>
+              <p>Rellenos inspirados en tradiciones traídas por sus fundadores.</p>
+            </article>
+            <article class="about-point">
+              <span>- 03</span>
+              <h3>Sabores en recorrido</h3>
+              <p>Cada bombón une ambos mundos en una misma experiencia.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="content-section section-contact" aria-labelledby="contacto-title">
+        <div class="section-inner">
+          <p class="section-kicker">Módulo editable</p>
+          <h2 id="contacto-title">Contacto</h2>
+          <div class="editable-panel" aria-label="Contenido editable de Contacto"></div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const carousel = document.querySelector("[data-carousel]");
+      const slides = [...carousel.querySelectorAll("[data-carousel-track] .combo-slide")];
+      const dots = carousel.parentElement.querySelector("[data-carousel-dots]");
+      const country = carousel.parentElement.querySelector("[data-carousel-country]");
+      const percentage = carousel.parentElement.querySelector("[data-carousel-percentage]");
+      const flavor = carousel.parentElement.querySelector("[data-carousel-flavor]");
+      let activeIndex = 0;
+
+      slides.forEach((slide, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "carousel-dot";
+        dot.setAttribute("aria-label", `Elegir bombón ${index + 1}`);
+        dot.addEventListener("click", () => {
+          activeIndex = index;
+          renderCarousel();
+        });
+        dots.append(dot);
+      });
+
+      function renderCarousel() {
+        slides.forEach((slide, index) => {
+          slide.className = "combo-slide";
+          if (index === activeIndex) slide.classList.add("is-active");
+          if (index === (activeIndex - 1 + slides.length) % slides.length) slide.classList.add("is-prev");
+          if (index === (activeIndex + 1) % slides.length) slide.classList.add("is-next");
+        });
+
+        const activeSlide = slides[activeIndex];
+        country.textContent = activeSlide.dataset.country;
+        percentage.textContent = activeSlide.dataset.percentage;
+        flavor.textContent = activeSlide.dataset.flavor;
+        [...dots.children].forEach((dot, index) => dot.classList.toggle("is-active", index === activeIndex));
+      }
+
+      carousel.querySelector("[data-carousel-prev]").addEventListener("click", () => {
+        activeIndex = (activeIndex - 1 + slides.length) % slides.length;
+        renderCarousel();
+      });
+
+      carousel.querySelector("[data-carousel-next]").addEventListener("click", () => {
+        activeIndex = (activeIndex + 1) % slides.length;
+        renderCarousel();
+      });
+
+      let autoplay;
+      function startAutoplay() {
+        clearInterval(autoplay);
+        autoplay = setInterval(() => {
+          activeIndex = (activeIndex + 1) % slides.length;
+          renderCarousel();
+        }, 3000);
+      }
+
+      carousel.addEventListener("mouseenter", () => clearInterval(autoplay));
+      carousel.addEventListener("mouseleave", startAutoplay);
+      carousel.addEventListener("focusin", () => clearInterval(autoplay));
+      carousel.addEventListener("focusout", (event) => {
+        if (!carousel.contains(event.relatedTarget)) startAutoplay();
+      });
+
+      renderCarousel();
+      startAutoplay();
+    </script>
+  </body>
+</html>

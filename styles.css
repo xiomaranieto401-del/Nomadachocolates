@@ -125,7 +125,7 @@ a {
 
 .combo-inner {
   display: grid;
-  gap: clamp(58px, 9vw, 104px);
+  gap: clamp(28px, 4vw, 52px);
 }
 
 .combo-intro {
@@ -185,25 +185,25 @@ a {
 }
 
 .combo-carousel {
-  width: min(100%, 820px);
+  width: min(100%, 960px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  gap: clamp(12px, 3vw, 34px);
+  grid-template-columns: 56px minmax(0, 1fr) 56px;
+  gap: clamp(22px, 3vw, 36px);
   align-items: center;
 }
 
 .combo-track {
   position: relative;
   min-width: 0;
-  height: clamp(210px, 29vw, 320px);
+  height: clamp(190px, 24vw, 270px);
 }
 
 .combo-slide {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: min(44vw, 450px);
+  width: min(38vw, 400px);
   padding: 0;
   border: 0;
   background: transparent;
@@ -236,12 +236,12 @@ a {
 
 .combo-slide.is-prev {
   z-index: 1;
-  transform: translate(calc(-50% - min(31vw, 300px)), -50%) scale(0.68);
+  transform: translate(calc(-50% - min(28vw, 280px)), -50%) scale(0.66);
 }
 
 .combo-slide.is-next {
   z-index: 1;
-  transform: translate(calc(-50% + min(31vw, 300px)), -50%) scale(0.68);
+  transform: translate(calc(-50% + min(28vw, 280px)), -50%) scale(0.66);
 }
 
 .carousel-control {
@@ -270,6 +270,7 @@ a {
   display: grid;
   justify-items: center;
   gap: 8px;
+  margin-top: -14px;
   text-align: center;
 }
 
@@ -298,6 +299,7 @@ a {
 
 .carousel-dots {
   display: flex;
+  margin-top: -8px;
   justify-content: center;
   gap: 10px;
 }

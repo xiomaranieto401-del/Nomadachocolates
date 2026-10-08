@@ -447,14 +447,13 @@ h2 {
   .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; padding: 12px 20px 20px; background: var(--green); gap: 0; font-size: 0.85rem; }
   .menu-toggle[aria-expanded="true"] + .nav-links { display: flex; flex-direction: column; align-items: stretch; }
   .nav-links a { padding: 14px 8px; }
-  .hero-section { min-height: 620px; min-height: max(620px, 88svh); padding-top: 72px; touch-action: pan-y; }
-  .hero-section .hero-image { user-select: none; -webkit-user-drag: none; }
-  .hero-image { position: absolute; inset: 72px 0 0; width: 100%; height: calc(100% - 72px); object-fit: cover; object-position: 66% center; }
-  .hero-shade { display: block; inset: 72px 0 0; background: linear-gradient(180deg, rgba(20, 14, 10, 0.24), rgba(20, 14, 10, 0.58)); }
-  .hero-copy { min-height: 548px; min-height: max(548px, calc(88svh - 72px)); padding: 36px 20px 48px; align-content: end; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
-  .hero-copy p { margin: 0 0 20px; font-size: 0.9rem; }
-  .hero-copy h1 { max-width: 100%; font-size: 36px; line-height: 1; gap: 32px; }
-  .hero-number { font-size: 108px; line-height: 1; letter-spacing: 0; }
+  .hero-section { min-height: 0; padding-top: 72px; }
+  .hero-image { position: absolute; inset: 72px 0 0; width: 100%; height: calc(100% - 72px); object-fit: contain; object-position: center; }
+  .hero-shade { display: block; inset: 72px 0 0; background: linear-gradient(90deg, rgba(20, 14, 10, 0.65), rgba(20, 14, 10, 0.18) 65%); }
+  .hero-copy { min-height: 0; aspect-ratio: 1672 / 941; padding: 16px; align-content: center; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
+  .hero-copy p { margin: 0 0 10px; font-size: 12px; }
+  .hero-copy h1 { max-width: 100%; font-size: 26px; line-height: 1; gap: 18px; }
+  .hero-number { font-size: 68px; line-height: 1; letter-spacing: 0; }
 
   .about-board {
     grid-template-columns: 1fr;
@@ -496,8 +495,7 @@ h2 {
 
 /* Mobile polish: keep product captions unobstructed */
 @media (max-width: 760px) {
-  .products-inner .deco-butterfly,
-  .products-inner .deco-monkey {
+  .deco {
     display: none;
   }
   .product-grid::after { display: none; }

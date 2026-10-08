@@ -447,10 +447,10 @@ h2 {
   .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; padding: 12px 20px 20px; background: var(--green); gap: 0; font-size: 0.85rem; }
   .menu-toggle[aria-expanded="true"] + .nav-links { display: flex; flex-direction: column; align-items: stretch; }
   .nav-links a { padding: 14px 8px; }
-  .hero-section { display: flex; flex-direction: column; min-height: 0; padding-top: 72px; background: #4d3323; }
-  .hero-image { position: relative; inset: auto; width: 100%; height: auto; aspect-ratio: 1672 / 941; object-fit: contain; }
-  .hero-shade { display: none; }
-  .hero-copy { min-height: 0; padding: 28px 20px 38px; align-content: start; }
+  .hero-section { min-height: 620px; min-height: max(620px, 88svh); padding-top: 72px; }
+  .hero-image { position: absolute; inset: 72px 0 0; width: 100%; height: calc(100% - 72px); object-fit: cover; object-position: 66% center; }
+  .hero-shade { display: block; inset: 72px 0 0; background: linear-gradient(180deg, rgba(20, 14, 10, 0.24), rgba(20, 14, 10, 0.58)); }
+  .hero-copy { min-height: 548px; min-height: max(548px, calc(88svh - 72px)); padding: 36px 20px 48px; align-content: end; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
   .hero-copy p { margin: 0 0 20px; font-size: 0.9rem; }
   .hero-copy h1 { max-width: 100%; font-size: 36px; line-height: 1; gap: 32px; }
   .hero-number { font-size: 108px; line-height: 1; letter-spacing: 0; }
@@ -472,8 +472,11 @@ h2 {
   .combo-slide.is-far-prev, .combo-slide.is-far-next { opacity: 0; }
   .combo-meta { align-items: flex-start; flex-direction: column; }
 
-  .product-grid { grid-template-columns: 1fr; }
-  .product-grid img { height: clamp(210px, 58vw, 320px); }
+  .products-section { padding-left: 14px; padding-right: 14px; }
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .product-grid article { grid-template-rows: auto 1fr; }
+  .product-grid img { height: auto; aspect-ratio: 1 / 1; }
+  .product-grid h3 { min-height: 64px; padding: 10px; font-size: 20px; line-height: 1.1; overflow-wrap: break-word; }
   .locations-grid, .site-footer { grid-template-columns: 1fr; }
 
   .deco-cacao { top: -30px; left: -18px; width: 64px; }

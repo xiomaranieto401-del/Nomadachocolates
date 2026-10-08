@@ -447,7 +447,8 @@ h2 {
   .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; padding: 12px 20px 20px; background: var(--green); gap: 0; font-size: 0.85rem; }
   .menu-toggle[aria-expanded="true"] + .nav-links { display: flex; flex-direction: column; align-items: stretch; }
   .nav-links a { padding: 14px 8px; }
-  .hero-section { min-height: 620px; min-height: max(620px, 88svh); padding-top: 72px; }
+  .hero-section { min-height: 620px; min-height: max(620px, 88svh); padding-top: 72px; touch-action: pan-y; }
+  .hero-section .hero-image { user-select: none; -webkit-user-drag: none; }
   .hero-image { position: absolute; inset: 72px 0 0; width: 100%; height: calc(100% - 72px); object-fit: cover; object-position: 66% center; }
   .hero-shade { display: block; inset: 72px 0 0; background: linear-gradient(180deg, rgba(20, 14, 10, 0.24), rgba(20, 14, 10, 0.58)); }
   .hero-copy { min-height: 548px; min-height: max(548px, calc(88svh - 72px)); padding: 36px 20px 48px; align-content: end; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }

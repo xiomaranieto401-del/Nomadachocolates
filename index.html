@@ -26,6 +26,37 @@
     </main>
     <footer class="site-footer"><div><strong>Contacto</strong><span>+54 9 11 2345 6789</span><span>hola@nomada.com.ar</span></div><div><strong>Horarios</strong><span>Lunes a sábado</span><span>10:00 a 20:00 hs</span></div><div><strong>Redes</strong><span>@nomada_chocolates</span></div><img src="assets/nomada-logo.png" alt="Nómada" /></footer>
     <script>
+      const hero = document.querySelector(".hero-section");
+      const heroImage = hero.querySelector(".hero-image");
+      const mobileHero = window.matchMedia("(max-width: 760px)");
+      let heroPosition = 66;
+      let heroDrag = null;
+      hero.addEventListener("pointerdown", (event) => {
+        if (!mobileHero.matches || !event.isPrimary) return;
+        const bounds = heroImage.getBoundingClientRect();
+        const scale = Math.max(bounds.width / heroImage.naturalWidth, bounds.height / heroImage.naturalHeight);
+        const overflow = heroImage.naturalWidth * scale - bounds.width;
+        if (!Number.isFinite(overflow) || overflow <= 0) return;
+        heroDrag = { id: event.pointerId, x: event.clientX, y: event.clientY, position: heroPosition, overflow };
+        hero.setPointerCapture(event.pointerId);
+      });
+      hero.addEventListener("pointermove", (event) => {
+        if (!heroDrag || event.pointerId !== heroDrag.id) return;
+        const deltaX = event.clientX - heroDrag.x;
+        const deltaY = event.clientY - heroDrag.y;
+        if (Math.abs(deltaX) < 8 || Math.abs(deltaX) < Math.abs(deltaY)) return;
+        heroPosition = Math.max(0, Math.min(100, heroDrag.position - deltaX / heroDrag.overflow * 100));
+        heroImage.style.objectPosition = `${heroPosition}% center`;
+      });
+      function endHeroDrag() { heroDrag = null; }
+      hero.addEventListener("pointerup", endHeroDrag);
+      hero.addEventListener("pointercancel", endHeroDrag);
+      hero.addEventListener("lostpointercapture", endHeroDrag);
+      mobileHero.addEventListener("change", () => {
+        endHeroDrag();
+        heroPosition = 66;
+        heroImage.style.removeProperty("object-position");
+      });
       const menuToggle = document.querySelector(".menu-toggle");
       const navigation = document.querySelector(".nav-links");
       function closeMenu() {
